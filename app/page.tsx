@@ -36,6 +36,13 @@ export default function Home() {
       <header>
         <div className="header-inner">
           <div className="logo">大阪タワマンのインテリア相談室</div>
+          <nav className="header-nav" aria-label="セクションナビゲーション">
+            <a href="#concept">Concept</a>
+            <a href="#services">Features</a>
+            <a href="#flow">Flow</a>
+            <a href="#plans">Plans</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
       </header>
 
@@ -150,6 +157,9 @@ export default function Home() {
           <p className="section-subtitle">大阪のタワマンに特化しているから、できることがあります。</p>
           <div className="features-grid">
             <div className="feature-item">
+              <div className="feature-image">
+                <img src="/images/Features1.jpg" alt="大阪タワマン特化のイメージ" />
+              </div>
               <div className="feature-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
@@ -199,6 +209,9 @@ export default function Home() {
             <div className="flow-item">
               <div className="flow-num">01</div>
               <div className="flow-content">
+                <div className="flow-image">
+                  <img src="/images/FLOW1.png" alt="LINE無料相談のイメージ" />
+                </div>
                 <h4>LINE無料相談</h4>
                 <p>
                   まずはLINEでお気軽にご相談ください。お住まいの物件、困っていること、理想の暮らしのイメージをお聞かせいただきます。
@@ -208,6 +221,9 @@ export default function Home() {
             <div className="flow-item">
               <div className="flow-num">02</div>
               <div className="flow-content">
+                <div className="flow-image">
+                  <img src="/images/FLOW2.png" alt="ヒアリング・採寸のイメージ" />
+                </div>
                 <h4>ヒアリング・採寸</h4>
                 <p>
                   暮らし方・好み・ご予算をじっくりお伺いします。お部屋の採寸と空間の観察を行い、タワマン特有の空間特性を把握します。
@@ -217,6 +233,9 @@ export default function Home() {
             <div className="flow-item">
               <div className="flow-num">03</div>
               <div className="flow-content">
+                <div className="flow-image">
+                  <img src="/images/FLOW3.png" alt="3Dパース・ご提案のイメージ" />
+                </div>
                 <h4>3Dパース・ご提案</h4>
                 <p>
                   リアルな3DCGで空間イメージをご提案。家具リストではなく「この空間でこう過ごせます」というシナリオでお見せします。なぜこの選択かの理由もセットでお渡しします。
@@ -226,6 +245,9 @@ export default function Home() {
             <div className="flow-item">
               <div className="flow-num">04</div>
               <div className="flow-content">
+                <div className="flow-image">
+                  <img src="/images/FLOW4.png" alt="家具購入・搬入設置のイメージ" />
+                </div>
                 <h4>家具購入・搬入設置</h4>
                 <p>
                   ご納得いただけましたら、家具の購入手配から搬入・設置まで全て代行します。あなたは届くのを待つだけです。
@@ -318,6 +340,9 @@ export default function Home() {
               </p>
             </div>
             <div className="speciality-item">
+              <div className="speciality-image">
+                <img src="/images/WhyOsaka2.png" alt="生活圏を理解した提案のイメージ" />
+              </div>
               <h4>生活圏を理解した提案</h4>
               <p>
                 中之島の川沿いを散歩する朝、北浜のカフェで過ごす休日。あなたの生活圏を知っているからこそ、暮らしに寄り添った空間を提案できます。
@@ -327,12 +352,6 @@ export default function Home() {
               <h4>採寸・納品に物理的に対応</h4>
               <p>
                 大阪在住だからこそ、現地採寸や納品立ち会いに迅速に対応。オンラインだけでは見落とすディテールもしっかり確認します。
-              </p>
-            </div>
-            <div className="speciality-item">
-              <h4>1,000以上のブランドから最適提案</h4>
-              <p>
-                特定メーカーに縛られず、FLYMEe・関家具など幅広い仕入先から、あなたの空間とテイストに合った家具を横断的にセレクトします。
               </p>
             </div>
           </div>
@@ -348,7 +367,7 @@ export default function Home() {
             <br />
             「何から始めればいいか分からない」というご相談だけでも大丈夫です。
           </p>
-          <a href="https://lin.ee/xxxxx" className="cta-button" target="_blank" rel="noreferrer">
+          <a href="https://lin.ee/stqqiHK8" className="cta-button" target="_blank" rel="noreferrer">
             LINEで無料相談する
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
               <path d="M5 12h14M12 5l7 7-7 7" />
