@@ -44,6 +44,11 @@ html {
   font-size: 16px;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -135,7 +140,7 @@ header {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 16px 24px;
   max-width: 1100px;
   margin: 0 auto;
@@ -180,7 +185,7 @@ header {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: url("/images/hero-bg.png") center center / cover no-repeat;
+  background: url("/images/hero-bg.png") 62% center / cover no-repeat;
 }
 
 .hero::before {
@@ -204,6 +209,7 @@ header {
   position: relative;
   z-index: 2;
   padding-top: 80px;
+  max-width: 660px;
 }
 
 .hero-label {
@@ -227,6 +233,7 @@ header {
   opacity: 0;
   color: var(--white);
   text-shadow: 0 14px 46px rgba(0, 0, 0, 0.58);
+  max-width: 14em;
 }
 
 .hero-title em {
@@ -238,11 +245,31 @@ header {
   font-size: 0.95rem;
   color: rgba(253, 252, 250, 0.82);
   line-height: 2.2;
-  max-width: 520px;
+  max-width: 34em;
   margin-bottom: 48px;
   animation: fadeUp 0.8s ease 0.3s forwards;
   opacity: 0;
   text-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+}
+
+.hero-title,
+.hero-description,
+.section-title,
+.section-subtitle,
+.concept-text h3,
+.concept-text p,
+.problem-title,
+.problem-text,
+.feature-title,
+.feature-text,
+.flow-content h4,
+.flow-content p,
+.speciality-item h4,
+.speciality-item p,
+.cta-title,
+.cta-text {
+  line-break: strict;
+  word-break: normal;
 }
 
 .hero-cta {
@@ -312,6 +339,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
   margin-top: 48px;
+  grid-auto-rows: 1fr;
 }
 
 .problem-card {
@@ -320,6 +348,9 @@ header {
   border-radius: 4px;
   transition: all 0.4s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .problem-image {
@@ -367,22 +398,23 @@ header {
   font-size: 0.88rem;
   color: var(--text-light);
   line-height: 1.9;
+  margin-top: auto;
 }
 
 .concept-block {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
 }
 
-.concept-text-full {
-  grid-column: 1 / -1;
+.concept-text {
+  max-width: 100%;
 }
 
 .concept-visual {
-  height: 480px;
-  background: linear-gradient(135deg, var(--bg-warm) 0%, #ddd6cc 100%);
+  min-height: 360px;
+  background: linear-gradient(135deg, rgba(237, 232, 223, 0.45) 0%, rgba(221, 214, 204, 0.38) 100%);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -394,18 +426,30 @@ header {
 .concept-visual::before {
   content: "";
   position: absolute;
-  inset: 20px;
+  inset: 14px;
   border: 1px solid rgba(139, 115, 85, 0.15);
   border-radius: 2px;
+  pointer-events: none;
 }
 
-.concept-visual-text {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  color: var(--accent);
-  letter-spacing: 0.15em;
-  text-align: center;
-  line-height: 2.2;
+.concept-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+@media (min-width: 1024px) {
+  .concept-block {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 56px;
+    align-items: center;
+  }
+
+  .concept-visual {
+    min-height: 420px;
+  }
 }
 
 .concept-text h3 {
@@ -790,9 +834,9 @@ footer {
 
 .scroll-cta {
   position: fixed;
-  left: 50%;
+  right: 24px;
   bottom: 24px;
-  transform: translateX(-50%);
+  transform: none;
   z-index: 90;
   display: inline-flex;
   align-items: center;
@@ -816,7 +860,7 @@ footer {
 
 .scroll-cta:hover {
   background: var(--accent-dark);
-  transform: translate(-50%, -2px);
+  transform: translateY(-2px);
 }
 
 .scroll-cta svg {
@@ -826,8 +870,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .section {
-    padding: 80px 0;
+    padding: 76px 0;
   }
 
   .concept-block {
@@ -836,7 +884,11 @@ footer {
   }
 
   .concept-visual {
-    height: 280px;
+    min-height: 260px;
+  }
+
+  .concept-image {
+    object-fit: cover;
   }
 
   .features-grid {
@@ -855,6 +907,53 @@ footer {
 
   .hero {
     min-height: 90vh;
+    align-items: flex-end;
+    background-position: 74% center;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      95deg,
+      rgba(44, 40, 37, 0.84) 0%,
+      rgba(44, 40, 37, 0.72) 42%,
+      rgba(44, 40, 37, 0.44) 68%,
+      rgba(44, 40, 37, 0.18) 86%,
+      rgba(44, 40, 37, 0.06) 100%
+    );
+  }
+
+  .hero-content {
+    width: 100%;
+    padding-top: 96px;
+    padding-bottom: 84px;
+  }
+
+  .hero-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+    line-height: 1.52;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+    max-width: none;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+    line-height: 2.05;
+    margin-bottom: 28px;
+    max-width: 25em;
+    color: rgba(253, 252, 250, 0.86);
+  }
+
+  .hero-cta {
+    padding: 13px 22px;
+    font-size: 0.83rem;
+    letter-spacing: 0.06em;
   }
 
   .flow-item {
@@ -866,17 +965,44 @@ footer {
     gap: 16px;
   }
 
-  .header-cta span {
-    display: none;
+  .section-title {
+    font-size: clamp(1.35rem, 6.3vw, 1.7rem);
+    line-height: 1.65;
+    margin-bottom: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.95;
+    max-width: 100%;
+  }
+
+  .concept-text h3 {
+    font-size: 1.32rem;
+    line-height: 1.7;
+  }
+
+  .concept-text p,
+  .feature-text,
+  .flow-content p,
+  .speciality-item p,
+  .pricing-note,
+  .cta-text {
+    font-size: 0.9rem;
+    line-height: 2;
+    max-width: 100%;
   }
 
   .scroll-cta {
-    left: 24px;
-    right: 24px;
-    width: auto;
-    transform: none;
-    border-radius: 4px;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 999px;
     gap: 10px;
+    padding: 10px 16px;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    max-width: calc(100vw - 32px);
   }
 
   .problem-card {
@@ -886,5 +1012,32 @@ footer {
   .problem-image {
     height: 140px;
     margin-bottom: 18px;
+  }
+
+  .problem-title {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .problem-text {
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+
+  .flow-item {
+    padding: 28px 0;
+  }
+
+  .flow-num {
+    min-width: 40px;
+    font-size: 1.45rem;
+  }
+
+  .speciality-item {
+    padding: 28px 20px;
+  }
+
+  .cta-title {
+    line-height: 1.65;
   }
 }

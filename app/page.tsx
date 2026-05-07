@@ -36,12 +36,6 @@ export default function Home() {
       <header>
         <div className="header-inner">
           <div className="logo">大阪タワマンのインテリア相談室</div>
-          <a href="#contact" className="header-cta">
-            <span>無料相談</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
         </div>
       </header>
 
@@ -127,7 +121,7 @@ export default function Home() {
       <section className="section" id="concept">
         <div className="container">
           <div className="concept-block">
-            <div className="concept-text concept-text-full">
+            <div className="concept-text">
               <div className="section-label">Concept</div>
               <h3>
                 暮らし方から逆算する、
@@ -141,6 +135,9 @@ export default function Home() {
                 あなたの暮らし方を起点に、タワマンの空間特性を活かした提案をします。天井高、窓からの光、眺望。それらを「あなたの家」にするための家具選びと配置を、理由付きでご提案します。
               </p>
               <p>なぜこのソファか。なぜこの色か。すべてに理由があるから、納得して選べます。</p>
+            </div>
+            <div className="concept-visual">
+              <img src="/images/Concept.png" alt="暮らしの提案イメージ" className="concept-image" />
             </div>
           </div>
         </div>
