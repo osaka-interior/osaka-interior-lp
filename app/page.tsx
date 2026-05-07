@@ -1,0 +1,355 @@
+export default function Home() {
+  return (
+    <>
+      <header>
+        <div className="header-inner">
+          <div className="logo">大阪タワマンのインテリア相談室</div>
+          <a href="#contact" className="header-cta">
+            <span>無料相談</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <section className="hero" id="top">
+        <div className="container hero-content">
+          <div className="hero-label">Osaka Tower Mansion Interior</div>
+          <h1 className="hero-title">
+            大阪のタワマンを、
+            <br />
+            <em>あなたの家</em>にする。
+          </h1>
+          <p className="hero-description">
+            タワマンを買っても、暮らしは自動的には完成しない。
+            <br />
+            あなたの毎日から逆算した家具選びと空間づくりを、
+            <br />
+            ヒアリングから設置まで一貫して代行します。
+          </p>
+          <a href="#contact" className="hero-cta">
+            LINEで無料相談する
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <a href="#problems" className="hero-scroll">
+          Scroll
+        </a>
+      </section>
+
+      <section className="section problems" id="problems">
+        <div className="container">
+          <div className="section-label">Problems</div>
+          <h2 className="section-title">こんなお悩みはありませんか？</h2>
+          <div className="divider" />
+          <div className="problems-grid">
+            <div className="problem-card">
+              <div className="problem-num">01</div>
+              <h3 className="problem-title">
+                何から手をつければいいか
+                <br />
+                分からない
+              </h3>
+              <p className="problem-text">
+                タワマンを買ったけれど、この広いリビングに何をどう置けばいいのか。賃貸の家具をそのまま持ってきたけど、なんか違う。
+              </p>
+            </div>
+            <div className="problem-card">
+              <div className="problem-num">02</div>
+              <h3 className="problem-title">
+                調べすぎて、
+                <br />
+                決められない
+              </h3>
+              <p className="problem-text">
+                Pinterestの保存は200件超え。カッシーナにも行った。でも「本当にこれでいいのか」が分からず、ずっと保留のまま。
+              </p>
+            </div>
+            <div className="problem-card">
+              <div className="problem-num">03</div>
+              <h3 className="problem-title">
+                忙しくて、
+                <br />
+                家具選びに時間が取れない
+              </h3>
+              <p className="problem-text">
+                平日は仕事、土日は他の予定。家具のことを考える時間も気力も足りない。誰かに整理してほしい。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="concept">
+        <div className="container">
+          <div className="concept-block">
+            <div className="concept-visual">
+              <div className="concept-visual-text">
+                タワマンは買えた。
+                <br />
+                でも「家」は、
+                <br />
+                まだできていない。
+              </div>
+            </div>
+            <div className="concept-text">
+              <div className="section-label">Concept</div>
+              <h3>
+                暮らし方から逆算する、
+                <br />
+                あなただけの空間づくり
+              </h3>
+              <p>
+                家具のカタログを並べるだけでは、心地よい空間は生まれません。朝のコーヒーをどこで飲むか。仕事から帰って最初に座る場所はどこか。休日の午後、夫婦それぞれがどう過ごすか。
+              </p>
+              <p>
+                あなたの暮らし方を起点に、タワマンの空間特性を活かした提案をします。天井高、窓からの光、眺望。それらを「あなたの家」にするための家具選びと配置を、理由付きでご提案します。
+              </p>
+              <p>なぜこのソファか。なぜこの色か。すべてに理由があるから、納得して選べます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section features" id="services">
+        <div className="container">
+          <div className="section-label">Features</div>
+          <h2 className="section-title">選ばれる理由</h2>
+          <p className="section-subtitle">大阪のタワマンに特化しているから、できることがあります。</p>
+          <div className="features-grid">
+            <div className="feature-item">
+              <div className="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <h3 className="feature-title">大阪タワマン特化</h3>
+              <p className="feature-text">
+                中之島、北浜、堂島、梅田、十三。大阪の主要タワマンの空間特性と周辺環境を熟知した上で提案します。
+              </p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+              </div>
+              <h3 className="feature-title">暮らし起点のヒアリング</h3>
+              <p className="feature-text">
+                家具の好みではなく、暮らし方から聞きます。「どう過ごしたいか」を言葉にするところから、一緒に始めます。
+              </p>
+            </div>
+            <div className="feature-item">
+              <div className="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <h3 className="feature-title">購入・設置まで一貫代行</h3>
+              <p className="feature-text">
+                提案で終わりではありません。1,000以上のブランドから家具を選定し、購入手配から搬入設置までワンストップで対応します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="flow">
+        <div className="container">
+          <div className="section-label">Flow</div>
+          <h2 className="section-title">ご依頼の流れ</h2>
+          <p className="section-subtitle">
+            LINEでのご相談から、家具の設置完了まで。最短14日で、あなたの空間が変わります。
+          </p>
+          <div className="flow-list">
+            <div className="flow-item">
+              <div className="flow-num">01</div>
+              <div className="flow-content">
+                <h4>LINE無料相談</h4>
+                <p>
+                  まずはLINEでお気軽にご相談ください。お住まいの物件、困っていること、理想の暮らしのイメージをお聞かせいただきます。
+                </p>
+              </div>
+            </div>
+            <div className="flow-item">
+              <div className="flow-num">02</div>
+              <div className="flow-content">
+                <h4>ヒアリング・採寸</h4>
+                <p>
+                  暮らし方・好み・ご予算をじっくりお伺いします。お部屋の採寸と空間の観察を行い、タワマン特有の空間特性を把握します。
+                </p>
+              </div>
+            </div>
+            <div className="flow-item">
+              <div className="flow-num">03</div>
+              <div className="flow-content">
+                <h4>3Dパース・ご提案</h4>
+                <p>
+                  リアルな3DCGで空間イメージをご提案。家具リストではなく「この空間でこう過ごせます」というシナリオでお見せします。なぜこの選択かの理由もセットでお渡しします。
+                </p>
+              </div>
+            </div>
+            <div className="flow-item">
+              <div className="flow-num">04</div>
+              <div className="flow-content">
+                <h4>家具購入・搬入設置</h4>
+                <p>
+                  ご納得いただけましたら、家具の購入手配から搬入・設置まで全て代行します。あなたは届くのを待つだけです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section pricing" id="plans">
+        <div className="container">
+          <div className="section-label">Plans</div>
+          <h2 className="section-title">料金プラン</h2>
+          <p className="section-subtitle">お客様の状況に合わせて、3つのプランをご用意しています。</p>
+          <div className="pricing-grid">
+            <div className="plan-card">
+              <div className="plan-name">Light</div>
+              <div className="plan-price">
+                ¥50,000 <span>〜</span>
+              </div>
+              <div className="plan-tax">税込</div>
+              <ul className="plan-features">
+                <li>インテリアコーディネート提案</li>
+                <li>商品リスト（URL付き）</li>
+                <li>3Dパース作成</li>
+                <li>修正1回</li>
+              </ul>
+              <a href="#contact" className="plan-cta">
+                このプランで相談する
+              </a>
+            </div>
+            <div className="plan-card recommended">
+              <div className="plan-badge">おすすめ</div>
+              <div className="plan-name">Basic</div>
+              <div className="plan-price">
+                ¥60,000 <span>〜</span>
+              </div>
+              <div className="plan-tax">税込</div>
+              <ul className="plan-features">
+                <li>インテリアコーディネート提案</li>
+                <li>商品リスト（URL付き）</li>
+                <li>3Dパース作成</li>
+                <li>修正2回</li>
+                <li>家具購入〜搬入設置サポート</li>
+                <li>（採寸はご自身で）</li>
+              </ul>
+              <a href="#contact" className="plan-cta">
+                このプランで相談する
+              </a>
+            </div>
+            <div className="plan-card">
+              <div className="plan-name">Premium</div>
+              <div className="plan-price">
+                ¥80,000 <span>〜</span>
+              </div>
+              <div className="plan-tax">税込</div>
+              <ul className="plan-features">
+                <li>インテリアコーディネート提案</li>
+                <li>商品リスト（URL付き）</li>
+                <li>3Dパース作成</li>
+                <li>修正3回</li>
+                <li>現地採寸</li>
+                <li>家具購入〜搬入設置サポート</li>
+              </ul>
+              <a href="#contact" className="plan-cta">
+                このプランで相談する
+              </a>
+            </div>
+          </div>
+          <p className="pricing-note">
+            ※ 上記はコーディネート料金です。家具代は別途実費となります。
+            <br />※ お部屋の広さや内容により変動する場合がございます。お気軽にご相談ください。
+          </p>
+        </div>
+      </section>
+
+      <section className="section" id="speciality">
+        <div className="container">
+          <div className="section-label">Why Osaka</div>
+          <h2 className="section-title">大阪タワマンに特化する理由</h2>
+          <p className="section-subtitle">
+            物件を知り、街を知り、暮らしを想像できること。それがコーディネートの精度を決めます。
+          </p>
+          <div className="speciality-list">
+            <div className="speciality-item">
+              <h4>物件ごとの空間特性を把握</h4>
+              <p>
+                天井高、窓の方角、建具の色、採光条件。物件ごとに異なる空間特性を踏まえた提案ができるのは、大阪のタワマンを熟知しているからです。
+              </p>
+            </div>
+            <div className="speciality-item">
+              <h4>生活圏を理解した提案</h4>
+              <p>
+                中之島の川沿いを散歩する朝、北浜のカフェで過ごす休日。あなたの生活圏を知っているからこそ、暮らしに寄り添った空間を提案できます。
+              </p>
+            </div>
+            <div className="speciality-item">
+              <h4>採寸・納品に物理的に対応</h4>
+              <p>
+                大阪在住だからこそ、現地採寸や納品立ち会いに迅速に対応。オンラインだけでは見落とすディテールもしっかり確認します。
+              </p>
+            </div>
+            <div className="speciality-item">
+              <h4>1,000以上のブランドから最適提案</h4>
+              <p>
+                特定メーカーに縛られず、FLYMEe・関家具など幅広い仕入先から、あなたの空間とテイストに合った家具を横断的にセレクトします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section cta-section" id="contact">
+        <div className="container cta-content">
+          <div className="section-label section-label-contact">Contact</div>
+          <h2 className="cta-title">まずは、お気軽にご相談ください。</h2>
+          <p className="cta-text">
+            初回のヒアリングは無料です。
+            <br />
+            「何から始めればいいか分からない」というご相談だけでも大丈夫です。
+          </p>
+          <a href="https://lin.ee/xxxxx" className="cta-button" target="_blank" rel="noreferrer">
+            LINEで無料相談する
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <p className="cta-note">※ LINE公式アカウントが開きます</p>
+        </div>
+      </section>
+
+      <footer>
+        <div className="container">
+          <div className="footer-logo">大阪タワマンのインテリア相談室</div>
+          <p className="footer-tagline">大阪のタワマンを、あなたの家にする。</p>
+          <div className="footer-links">
+            <a href="#concept">コンセプト</a>
+            <a href="#services">サービス</a>
+            <a href="#plans">料金プラン</a>
+            <a href="#flow">ご依頼の流れ</a>
+            <a href="#contact">お問い合わせ</a>
+          </div>
+          <p className="footer-copy">&copy; 2026 大阪タワマンのインテリア相談室. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <a href="https://lin.ee/xxxxx" className="line-float" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+        </svg>
+        無料相談する
+      </a>
+    </>
+  );
+}
