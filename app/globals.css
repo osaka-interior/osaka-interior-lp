@@ -624,6 +624,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 56px;
+  align-items: stretch;
 }
 
 .plan-card {
@@ -633,6 +634,9 @@ header {
   position: relative;
   transition: all 0.4s ease;
   background: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .plan-card:hover {
@@ -721,6 +725,7 @@ header {
   border-radius: 2px;
   transition: all 0.3s ease;
   font-weight: 400;
+  margin-top: auto;
 }
 
 .plan-cta:hover {
