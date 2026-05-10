@@ -1,5 +1,7 @@
 "use client";
 
+import { SectionViewTracker } from "@/components/SectionViewTracker";
+import { trackContactClick } from "@/lib/gtag";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -33,6 +35,7 @@ export default function Home() {
 
   return (
     <>
+      <SectionViewTracker />
       <header>
         <div className="header-inner">
           <div className="logo">大阪タワマンのインテリア相談室</div>
@@ -46,7 +49,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero" id="top">
+      <section className="hero" id="top" data-analytics-section="hero">
         <div className="container hero-content">
           <div className="hero-label">Osaka Tower Mansion Interior</div>
           <h1 className="hero-title">
@@ -61,7 +64,11 @@ export default function Home() {
             <br />
             ヒアリングから設置まで一貫して代行します。
           </p>
-          <a href="#contact" className="hero-cta">
+          <a
+            href="#contact"
+            className="hero-cta"
+            onClick={() => trackContactClick("hero")}
+          >
             LINEで無料相談する
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -73,7 +80,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="section problems" id="problems">
+      <section className="section problems" id="problems" data-analytics-section="problems">
         <div className="container">
           <div className="section-label">Problems</div>
           <h2 className="section-title">こんなお悩みはありませんか？</h2>
@@ -125,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="concept">
+      <section className="section" id="concept" data-analytics-section="concept">
         <div className="container">
           <div className="concept-block">
             <div className="concept-text">
@@ -150,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section features" id="services">
+      <section className="section features" id="services" data-analytics-section="features">
         <div className="container">
           <div className="section-label">Features</div>
           <h2 className="section-title">選ばれる理由</h2>
@@ -198,7 +205,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="flow">
+      <section className="section" id="flow" data-analytics-section="flow">
         <div className="container">
           <div className="section-label">Flow</div>
           <h2 className="section-title">ご依頼の流れ</h2>
@@ -258,7 +265,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section pricing" id="plans">
+      <section className="section pricing" id="plans" data-analytics-section="plans">
         <div className="container">
           <div className="section-label">Plans</div>
           <h2 className="section-title">料金プラン</h2>
@@ -276,7 +283,11 @@ export default function Home() {
                 <li>3Dパース作成</li>
                 <li>修正1回</li>
               </ul>
-              <a href="#contact" className="plan-cta">
+              <a
+                href="#contact"
+                className="plan-cta"
+                onClick={() => trackContactClick("plan")}
+              >
                 このプランで相談する
               </a>
             </div>
@@ -295,7 +306,11 @@ export default function Home() {
                 <li>家具購入〜搬入設置サポート</li>
                 <li>（採寸はご自身で）</li>
               </ul>
-              <a href="#contact" className="plan-cta">
+              <a
+                href="#contact"
+                className="plan-cta"
+                onClick={() => trackContactClick("plan")}
+              >
                 このプランで相談する
               </a>
             </div>
@@ -313,7 +328,11 @@ export default function Home() {
                 <li>現地採寸</li>
                 <li>家具購入〜搬入設置サポート</li>
               </ul>
-              <a href="#contact" className="plan-cta">
+              <a
+                href="#contact"
+                className="plan-cta"
+                onClick={() => trackContactClick("plan")}
+              >
                 このプランで相談する
               </a>
             </div>
@@ -325,7 +344,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="speciality">
+      <section className="section" id="speciality" data-analytics-section="why_osaka">
         <div className="container">
           <div className="section-label">Why Osaka</div>
           <h2 className="section-title">大阪タワマンに特化する理由</h2>
@@ -358,7 +377,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section cta-section" id="contact">
+      <section className="section cta-section" id="contact" data-analytics-section="contact">
         <div className="container cta-content">
           <div className="section-label section-label-contact">Contact</div>
           <h2 className="cta-title">まずは、お気軽にご相談ください。</h2>
@@ -367,7 +386,13 @@ export default function Home() {
             <br />
             「何から始めればいいか分からない」というご相談だけでも大丈夫です。
           </p>
-          <a href="https://lin.ee/stqqiHK8" className="cta-button" target="_blank" rel="noreferrer">
+          <a
+            href="https://lin.ee/stqqiHK8"
+            className="cta-button"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => trackContactClick("final")}
+          >
             LINEで無料相談する
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -393,7 +418,11 @@ export default function Home() {
       </footer>
 
       {showScrollCta && (
-        <a href="#contact" className="scroll-cta">
+        <a
+          href="#contact"
+          className="scroll-cta"
+          onClick={() => trackContactClick("fixed")}
+        >
           LINEで無料相談する
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7" />

@@ -8,6 +8,18 @@ export function sendPageView(url: string): void {
   });
 }
 
+export function trackSectionView(sectionName: string): void {
+  if (typeof window === "undefined") return;
+  window.gtag?.("event", "section_view", { section_name: sectionName });
+}
+
+export type ContactCtaLocation = "hero" | "fixed" | "plan" | "final";
+
+export function trackContactClick(ctaLocation: ContactCtaLocation): void {
+  if (typeof window === "undefined") return;
+  window.gtag?.("event", "contact_click", { cta_location: ctaLocation });
+}
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
