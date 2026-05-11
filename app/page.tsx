@@ -4,6 +4,9 @@ import { SectionViewTracker } from "@/components/SectionViewTracker";
 import { trackContactClick } from "@/lib/gtag";
 import { useEffect, useState } from "react";
 
+/** スマホ: fixedヘッダー分のオフセット（アンカー時に見出しが隠れないように） */
+const scrollAnchorMobile = "max-md:scroll-mt-[7.75rem]";
+
 export default function Home() {
   const [showScrollCta, setShowScrollCta] = useState(false);
 
@@ -54,7 +57,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero" id="top" data-analytics-section="hero">
+      <section className={`hero ${scrollAnchorMobile}`} id="top" data-analytics-section="hero">
         <div className="container hero-content">
           <div className="hero-label">Osaka Tower Mansion Interior</div>
           <h1 className="hero-title">
@@ -85,7 +88,11 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="section problems" id="problems" data-analytics-section="problems">
+      <section
+        className={`section problems ${scrollAnchorMobile}`}
+        id="problems"
+        data-analytics-section="problems"
+      >
         <div className="container">
           <div className="section-label">Problems</div>
           <h2 className="section-title">こんなお悩みはありませんか？</h2>
@@ -137,7 +144,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="concept" data-analytics-section="concept">
+      <section className={`section ${scrollAnchorMobile}`} id="concept" data-analytics-section="concept">
         <div className="container">
           <div className="concept-block">
             <div className="concept-text">
@@ -162,7 +169,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section features" id="services" data-analytics-section="features">
+      <section
+        className={`section features ${scrollAnchorMobile}`}
+        id="services"
+        data-analytics-section="features"
+      >
         <div className="container">
           <div className="section-label">Features</div>
           <h2 className="section-title">選ばれる理由</h2>
@@ -210,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="flow" data-analytics-section="flow">
+      <section className={`section ${scrollAnchorMobile}`} id="flow" data-analytics-section="flow">
         <div className="container">
           <div className="section-label">Flow</div>
           <h2 className="section-title">ご依頼の流れ</h2>
@@ -270,7 +281,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section pricing" id="plans" data-analytics-section="plans">
+      <section
+        className={`section pricing ${scrollAnchorMobile}`}
+        id="plans"
+        data-analytics-section="plans"
+      >
         <div className="container">
           <div className="section-label">Plans</div>
           <h2 className="section-title">料金プラン</h2>
@@ -349,7 +364,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="speciality" data-analytics-section="why_osaka">
+      <section
+        className={`section ${scrollAnchorMobile}`}
+        id="speciality"
+        data-analytics-section="why_osaka"
+      >
         <div className="container">
           <div className="section-label">Why Osaka</div>
           <h2 className="section-title">大阪タワマンに特化する理由</h2>
@@ -382,7 +401,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section cta-section" id="contact" data-analytics-section="contact">
+      <section
+        className={`section cta-section ${scrollAnchorMobile}`}
+        id="contact"
+        data-analytics-section="contact"
+      >
         <div className="container cta-content">
           <div className="section-label section-label-contact">Contact</div>
           <h2 className="cta-title">まずは、お気軽にご相談ください。</h2>
