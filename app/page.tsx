@@ -38,14 +38,19 @@ export default function Home() {
       <SectionViewTracker />
       <header>
         <div className="header-inner">
-          <div className="logo">大阪タワマンのインテリア相談室</div>
-          <nav className="header-nav" aria-label="セクションナビゲーション">
-            <a href="#concept">Concept</a>
-            <a href="#services">Features</a>
-            <a href="#flow">Flow</a>
-            <a href="#plans">Plans</a>
-            <a href="#contact">Contact</a>
-          </nav>
+          <div className="logo shrink-0">大阪タワマンのインテリア相談室</div>
+          <div className="min-w-0 w-full max-md:-mx-1 max-md:overflow-x-auto max-md:overscroll-x-contain max-md:touch-pan-x max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden md:contents md:min-w-0 md:w-auto">
+            <nav
+              className="header-nav max-md:w-max max-md:gap-5 max-md:py-0.5 max-md:pr-1 md:w-auto md:gap-[22px] md:py-0 md:pr-0"
+              aria-label="セクションナビゲーション"
+            >
+              <a href="#concept">Concept</a>
+              <a href="#services">Features</a>
+              <a href="#flow">Flow</a>
+              <a href="#plans">Plans</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
         </div>
       </header>
 

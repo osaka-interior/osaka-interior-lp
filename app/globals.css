@@ -953,11 +953,15 @@ footer {
 
 @media (max-width: 768px) {
   .header-inner {
-    padding: 14px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 10px 14px;
   }
 
-  .header-nav {
-    display: none;
+  .header-nav a {
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
   }
 
   .container {
