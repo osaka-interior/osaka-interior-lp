@@ -293,15 +293,12 @@ export default function Home() {
           <div className="pricing-grid">
             <div className="plan-card">
               <div className="plan-name">Light</div>
-              <div className="plan-price">
-                ¥50,000 <span>〜</span>
-              </div>
+              <div className="plan-price">¥30,000</div>
               <div className="plan-tax">税込</div>
               <ul className="plan-features">
-                <li>インテリアコーディネート提案</li>
-                <li>商品リスト（URL付き）</li>
-                <li>3Dパース作成</li>
-                <li>修正1回</li>
+                <li>インテリアコーディネート</li>
+                <li>商品リスト（URL付き）の送付</li>
+                <li>修正：1回まで</li>
               </ul>
               <a
                 href="#contact"
@@ -312,19 +309,15 @@ export default function Home() {
               </a>
             </div>
             <div className="plan-card recommended">
-              <div className="plan-badge">おすすめ</div>
+              <div className="plan-badge">もっとも人気</div>
               <div className="plan-name">Basic</div>
-              <div className="plan-price">
-                ¥60,000 <span>〜</span>
-              </div>
+              <div className="plan-price">¥50,000</div>
               <div className="plan-tax">税込</div>
               <ul className="plan-features">
-                <li>インテリアコーディネート提案</li>
-                <li>商品リスト（URL付き）</li>
-                <li>3Dパース作成</li>
-                <li>修正2回</li>
-                <li>家具購入〜搬入設置サポート</li>
-                <li>（採寸はご自身で）</li>
+                <li>インテリアコーディネート</li>
+                <li>商品リスト（URL付き）の送付</li>
+                <li>CG（3Dパース）作成</li>
+                <li>修正：2回まで</li>
               </ul>
               <a
                 href="#contact"
@@ -336,17 +329,14 @@ export default function Home() {
             </div>
             <div className="plan-card">
               <div className="plan-name">Premium</div>
-              <div className="plan-price">
-                ¥80,000 <span>〜</span>
-              </div>
+              <div className="plan-price">¥90,000</div>
               <div className="plan-tax">税込</div>
               <ul className="plan-features">
-                <li>インテリアコーディネート提案</li>
-                <li>商品リスト（URL付き）</li>
-                <li>3Dパース作成</li>
-                <li>修正3回</li>
-                <li>現地採寸</li>
-                <li>家具購入〜搬入設置サポート</li>
+                <li>インテリアコーディネート</li>
+                <li>商品リスト（URL付き）の送付</li>
+                <li>CG（3Dパース）作成</li>
+                <li>修正：3回まで</li>
+                <li>採寸、商品発注代行、受取日程の調整</li>
               </ul>
               <a
                 href="#contact"
